@@ -23,8 +23,8 @@ A job board application built with React, React Router, and Tailwind CSS on the 
 
 **Backend**
 - [FastAPI](https://fastapi.tiangolo.com/) + [Pydantic](https://docs.pydantic.dev/) (Python 3.10+)
+- [SQLAlchemy](https://www.sqlalchemy.org/) ORM backed by [SQLite](https://www.sqlite.org/) (`api/data/jobs.db`) — `jobs` and `companies` tables, linked by a foreign key
 - [Uvicorn](https://www.uvicorn.org/) as the ASGI server
-- Job listings persisted to a local JSON file (`api/data/jobs.json`) — no database required
 
 ## Project Structure
 
@@ -43,9 +43,14 @@ api/
 ├── app/
 │   ├── routes/jobs.py   # job CRUD endpoints (router mounted at /app/jobs)
 │   ├── schemas.py         # Pydantic request/response models (JobCreate, JobUpdate, JobOut, Company)
-│   └── storage.py          # reads/writes api/data/jobs.json
-├── data/jobs.json    # job listings data store
-├── main.py                # FastAPI app entry point
+│   ├── models.py           # SQLAlchemy ORM models (Company, Job) mapped to SQL tables
+│   └── database.py          # engine/session setup + get_db() dependency
+├── data/
+│   ├── jobs.json     # seed data — original listings, read by migrate_data.py
+│   └── jobs.db         # SQLite database file (generated, gitignored — not committed)
+├── create_tables.py    # one-off script: builds jobs.db's schema from models.py
+├── migrate_data.py       # one-off script: loads jobs.json into jobs.db
+├── main.py                 # FastAPI app entry point
 └── requirements.txt
 ```
 
@@ -65,6 +70,13 @@ cd api
 python -m venv .venv
 .venv\Scripts\Activate.ps1   # Windows PowerShell
 pip install -r requirements.txt
+```
+
+Then create the database and load the seed data (one-time setup — re-run only if you delete `jobs.db`):
+
+```bash
+python create_tables.py
+python migrate_data.py
 ```
 
 ### Running the app
@@ -110,5 +122,7 @@ Base path: `/app/jobs` (proxied through the frontend as `/api/jobs`)
 | GET    | `/app/jobs/{id}`     | Get a single job        |
 | PUT    | `/app/jobs/{id}`     | Update a job              |
 | DELETE | `/app/jobs/{id}`     | Delete a job                |
+
+`{id}` is an auto-incrementing integer assigned by the database (not a UUID or string).
 
 FastAPI auto-generates interactive API docs at `http://localhost:8000/docs`.

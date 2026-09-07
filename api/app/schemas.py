@@ -1,5 +1,5 @@
 from enum import Enum
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, ConfigDict, EmailStr, Field
 from typing import Optional
 
 
@@ -11,6 +11,8 @@ class JobType(str, Enum):
 
 
 class Company(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
     name: str = Field(min_length=1, max_length=100)
     description: str = Field(min_length=1, max_length=1000)
     contactEmail: EmailStr
@@ -36,7 +38,9 @@ class JobUpdate(BaseModel):
 
 
 class JobOut(BaseModel):
-    id: str
+    model_config = ConfigDict(from_attributes=True)
+
+    id: int
     title: str
     type: JobType
     description: str
