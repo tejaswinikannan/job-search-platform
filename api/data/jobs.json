@@ -83,6 +83,342 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "7",
+      "title": "Junior Full Stack Developer",
+      "type": "Full-Time",
+      "description": "Entry-level Full Stack Developer role for someone with 0-2 years of experience. You'll work across our Node.js/Express backend and React frontend, with mentorship from senior engineers. Familiarity with SQL and REST API design is a plus.",
+      "location": "Austin, TX",
+      "salary": "$65K - $75K",
+      "company": {
+        "name": "Meridian Softworks",
+        "description": "Meridian Softworks builds custom web applications for small and mid-sized businesses across the country.",
+        "contactEmail": "careers@meridiansoftworks.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "8",
+      "title": "Mid-Level Full Stack Engineer",
+      "type": "Full-Time",
+      "description": "We need a Full Stack Engineer (3-5 years experience) comfortable working across a TypeScript/React frontend and a Python/Django backend backed by PostgreSQL. You'll own features end-to-end, from schema design to UI polish.",
+      "location": "Denver, CO",
+      "salary": "$100K - $120K",
+      "company": {
+        "name": "Cobalt Apps",
+        "description": "Cobalt Apps designs and ships SaaS products for the logistics industry.",
+        "contactEmail": "hello@cobaltapps.io",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "9",
+      "title": "Senior Full Stack Developer (Remote)",
+      "type": "Remote",
+      "description": "Senior Full Stack Developer with 6+ years of experience needed to lead a small team building our core platform in React, Node.js, and PostgreSQL. Experience with GraphQL and CI/CD pipelines strongly preferred.",
+      "location": "Remote",
+      "salary": "$130K - $155K",
+      "company": {
+        "name": "Lighthouse Digital",
+        "description": "Lighthouse Digital is a fully remote product studio serving fintech and healthtech clients.",
+        "contactEmail": "jobs@lighthousedigital.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "10",
+      "title": "Junior Backend Developer",
+      "type": "Full-Time",
+      "description": "Great first job for a Junior Backend Developer with a foundation in Python and SQL. You'll help maintain REST APIs, write database queries, and fix bugs under the guidance of our engineering team. No prior professional experience required.",
+      "location": "Columbus, OH",
+      "salary": "$60K - $72K",
+      "company": {
+        "name": "Ironclad Systems",
+        "description": "Ironclad Systems builds backend infrastructure for insurance and claims-processing companies.",
+        "contactEmail": "recruiting@ironcladsystems.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "11",
+      "title": "Backend Engineer (Node.js)",
+      "type": "Full-Time",
+      "description": "Mid-level Backend Engineer (2-4 years) to design and maintain microservices in Node.js and Express, backed by PostgreSQL and Redis. Solid understanding of SQL query optimization and API authentication is required.",
+      "location": "Chicago, IL",
+      "salary": "$95K - $115K",
+      "company": {
+        "name": "Nimbus Backend Co",
+        "description": "Nimbus Backend Co provides API infrastructure for e-commerce platforms.",
+        "contactEmail": "team@nimbusbackend.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "12",
+      "title": "Senior Backend Developer (Java)",
+      "type": "Full-Time",
+      "description": "Senior Backend Developer (7+ years) needed to architect high-throughput services in Java and Spring Boot. Deep SQL and distributed systems experience required; you'll mentor junior staff and drive technical design decisions.",
+      "location": "Raleigh, NC",
+      "salary": "$140K - $165K",
+      "company": {
+        "name": "Vertex API Labs",
+        "description": "Vertex API Labs builds high-performance backend systems for financial services companies.",
+        "contactEmail": "careers@vertexapilabs.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "13",
+      "title": "Junior DevOps Engineer",
+      "type": "Full-Time",
+      "description": "Entry-level DevOps Engineer role. You'll assist with CI/CD pipeline maintenance, basic AWS infrastructure tasks, and Docker container builds under senior guidance. Some exposure to Linux and scripting expected.",
+      "location": "Salt Lake City, UT",
+      "salary": "$65K - $78K",
+      "company": {
+        "name": "CloudForge Inc",
+        "description": "CloudForge Inc helps startups build and scale their cloud infrastructure.",
+        "contactEmail": "jobs@cloudforgeinc.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "14",
+      "title": "DevOps Engineer",
+      "type": "Full-Time",
+      "description": "Mid-level DevOps Engineer (3-5 years) to manage our Kubernetes clusters, Terraform infrastructure-as-code, and CI/CD pipelines on AWS. Strong scripting skills in Python or Bash required.",
+      "location": "Nashville, TN",
+      "salary": "$105K - $125K",
+      "company": {
+        "name": "PipelineOps",
+        "description": "PipelineOps provides DevOps consulting and managed infrastructure for mid-sized tech companies.",
+        "contactEmail": "hire@pipelineops.dev",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "15",
+      "title": "Senior DevOps / SRE",
+      "type": "Remote",
+      "description": "Senior DevOps/SRE (6+ years) to own our production reliability, on-call rotation, and multi-region Kubernetes deployments. Deep expertise in Terraform, AWS, and observability tooling (Prometheus, Grafana) required.",
+      "location": "Remote",
+      "salary": "$145K - $170K",
+      "company": {
+        "name": "Sentinel Infrastructure",
+        "description": "Sentinel Infrastructure runs mission-critical cloud infrastructure for enterprise SaaS companies.",
+        "contactEmail": "sre-jobs@sentinelinfra.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "16",
+      "title": "Junior Data Engineer",
+      "type": "Full-Time",
+      "description": "Junior Data Engineer role focused on writing SQL queries, maintaining ETL pipelines, and supporting our data warehouse. Great opportunity for someone early in their career with strong SQL fundamentals.",
+      "location": "Minneapolis, MN",
+      "salary": "$68K - $80K",
+      "company": {
+        "name": "DataForge Analytics",
+        "description": "DataForge Analytics builds data pipelines and reporting tools for retail clients.",
+        "contactEmail": "careers@dataforgeanalytics.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "17",
+      "title": "Database Administrator (PostgreSQL)",
+      "type": "Full-Time",
+      "description": "Mid-level Database Administrator (3-5 years) responsible for PostgreSQL performance tuning, backup strategy, and query optimization. Strong advanced SQL skills required; experience with replication a plus.",
+      "location": "San Diego, CA",
+      "salary": "$100K - $120K",
+      "company": {
+        "name": "Warehouse Nine",
+        "description": "Warehouse Nine operates data warehousing solutions for supply chain companies.",
+        "contactEmail": "dba-jobs@warehousenine.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "18",
+      "title": "Senior Data Engineer",
+      "type": "Full-Time",
+      "description": "Senior Data Engineer (6+ years) to design our next-generation data platform using Spark, Airflow, and SQL-based data warehouses (Snowflake/BigQuery). You'll lead architecture decisions and mentor junior engineers.",
+      "location": "Charlotte, NC",
+      "salary": "$135K - $160K",
+      "company": {
+        "name": "PulseData Systems",
+        "description": "PulseData Systems builds real-time analytics platforms for media and advertising companies.",
+        "contactEmail": "jobs@pulsedatasystems.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "19",
+      "title": "Junior AI Engineer",
+      "type": "Full-Time",
+      "description": "Junior AI Engineer role for someone with a foundation in Python and machine learning basics. You'll help build and test LLM-powered features, working with vector databases and prompt engineering under senior mentorship.",
+      "location": "San Francisco, CA",
+      "salary": "$85K - $100K",
+      "company": {
+        "name": "Cortex AI Labs",
+        "description": "Cortex AI Labs builds applied AI products powered by large language models.",
+        "contactEmail": "talent@cortexailabs.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "20",
+      "title": "AI Engineer (LLM Applications)",
+      "type": "Full-Time",
+      "description": "Mid-level AI Engineer (3-5 years) to build production LLM applications using LangChain, vector databases (Pinecone/Chroma), and retrieval-augmented generation pipelines. Strong Python skills required.",
+      "location": "Seattle, WA",
+      "salary": "$120K - $145K",
+      "company": {
+        "name": "Synapse Intelligence",
+        "description": "Synapse Intelligence develops conversational AI products for enterprise customer support.",
+        "contactEmail": "careers@synapseintelligence.ai",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "21",
+      "title": "Senior AI Engineer",
+      "type": "Remote",
+      "description": "Senior AI Engineer (6+ years) to lead development of our multi-agent LLM systems, including tool-calling, MCP integrations, and vector search infrastructure. You'll set technical direction for the AI platform team.",
+      "location": "Remote",
+      "salary": "$160K - $190K",
+      "company": {
+        "name": "Nexus Cognition",
+        "description": "Nexus Cognition builds autonomous AI agent platforms for enterprise workflow automation.",
+        "contactEmail": "ai-jobs@nexuscognition.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "22",
+      "title": "Junior Machine Learning Engineer",
+      "type": "Full-Time",
+      "description": "Junior ML Engineer position for a recent graduate with coursework or projects in Python, scikit-learn, and basic statistics. You'll assist in training and evaluating models under senior supervision.",
+      "location": "Pittsburgh, PA",
+      "salary": "$80K - $95K",
+      "company": {
+        "name": "Vector Peak AI",
+        "description": "Vector Peak AI builds machine learning products for the healthcare industry.",
+        "contactEmail": "hr@vectorpeakai.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "23",
+      "title": "Machine Learning Engineer",
+      "type": "Full-Time",
+      "description": "Mid-level ML Engineer (3-5 years) to build and deploy models using PyTorch and TensorFlow, with strong Python and SQL skills for feature engineering against our production data warehouse.",
+      "location": "Boulder, CO",
+      "salary": "$125K - $150K",
+      "company": {
+        "name": "Gradient Works",
+        "description": "Gradient Works builds ML-powered forecasting tools for e-commerce retailers.",
+        "contactEmail": "jobs@gradientworks.io",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "24",
+      "title": "Senior Machine Learning Engineer",
+      "type": "Full-Time",
+      "description": "Senior ML Engineer (7+ years) to own our recommendation system end-to-end, from model training in PyTorch to production deployment. Deep experience with MLOps, feature stores, and large-scale SQL data pipelines required.",
+      "location": "New York, NY",
+      "salary": "$150K - $180K",
+      "company": {
+        "name": "Northstar ML",
+        "description": "Northstar ML builds recommendation and personalization engines for streaming media platforms.",
+        "contactEmail": "careers@northstarml.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "25",
+      "title": "Junior Data Scientist",
+      "type": "Full-Time",
+      "description": "Entry-level Data Scientist role for someone with strong SQL and statistics fundamentals. You'll build dashboards, run A/B test analysis, and support senior data scientists with ad-hoc queries.",
+      "location": "Indianapolis, IN",
+      "salary": "$70K - $85K",
+      "company": {
+        "name": "Insight Metrics",
+        "description": "Insight Metrics provides analytics and business intelligence services to mid-market companies.",
+        "contactEmail": "careers@insightmetrics.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "26",
+      "title": "Senior Data Scientist",
+      "type": "Remote",
+      "description": "Senior Data Scientist (6+ years) to lead experimentation strategy and predictive modeling initiatives. Advanced SQL, Python, and statistical modeling expertise required; prior mentorship experience a plus.",
+      "location": "Remote",
+      "salary": "$135K - $160K",
+      "company": {
+        "name": "Quantify Labs",
+        "description": "Quantify Labs delivers data science consulting for consumer goods companies.",
+        "contactEmail": "jobs@quantifylabs.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "27",
+      "title": "Junior QA Engineer",
+      "type": "Full-Time",
+      "description": "Junior QA Engineer role focused on manual testing and writing basic automated test scripts in Selenium. SQL knowledge for validating test data is a plus. Great entry point into software testing.",
+      "location": "Tampa, FL",
+      "salary": "$55K - $68K",
+      "company": {
+        "name": "Bughunter QA",
+        "description": "Bughunter QA provides quality assurance and testing services for gaming and mobile app studios.",
+        "contactEmail": "careers@bughunterqa.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "28",
+      "title": "Senior SDET",
+      "type": "Full-Time",
+      "description": "Senior Software Development Engineer in Test (6+ years) to build and maintain our automated testing framework in Cypress and Playwright, integrated with CI/CD. Strong programming and SQL debugging skills required.",
+      "location": "Phoenix, AZ",
+      "salary": "$120K - $140K",
+      "company": {
+        "name": "Assure Software",
+        "description": "Assure Software builds testing and quality automation tools for enterprise software teams.",
+        "contactEmail": "jobs@assuresoftware.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "29",
+      "title": "Junior Mobile Developer (iOS)",
+      "type": "Full-Time",
+      "description": "Junior iOS Developer role for someone with Swift fundamentals and an interest in mobile UI development. You'll work alongside senior mobile engineers to ship features for our consumer app.",
+      "location": "Orlando, FL",
+      "salary": "$68K - $80K",
+      "company": {
+        "name": "AppOrbit Mobile",
+        "description": "AppOrbit Mobile builds consumer mobile apps in the travel and hospitality space.",
+        "contactEmail": "careers@apporbitmobile.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "30",
+      "title": "Senior Mobile Developer (Android)",
+      "type": "Remote",
+      "description": "Senior Android Developer (6+ years) with deep Kotlin expertise to lead our mobile architecture. Experience with offline-first data sync and local SQL databases (Room/SQLite) strongly preferred.",
+      "location": "Remote",
+      "salary": "$130K - $155K",
+      "company": {
+        "name": "Pocket Studio",
+        "description": "Pocket Studio designs and builds mobile-first products for the fitness and wellness industry.",
+        "contactEmail": "jobs@pocketstudio.app",
+        "contactPhone": "555-555-5555"
+      }
     }
   ]
 }

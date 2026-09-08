@@ -1,4 +1,4 @@
-# React Jobs
+#  Job Board
 
 A job board application built with React, React Router, and Tailwind CSS on the frontend, backed by a FastAPI + Pydantic REST API. Users can browse job listings, view details, post new jobs, edit, and delete them.
 

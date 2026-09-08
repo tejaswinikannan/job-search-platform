@@ -1,5 +1,5 @@
 import {NavLink} from 'react-router-dom';
-import logo from '../assets/images/logo.png';
+import {FaBriefcase} from 'react-icons/fa';
 
 const Navbar = () => {
   const linkClass = ({isActive})=> 
@@ -16,13 +16,9 @@ const Navbar = () => {
           >
             {/* <!-- Logo --> */}
             <NavLink className="flex flex-shrink-0 items-center mr-4" href="/">
-              <img
-                className="h-10 w-auto"
-                src={logo}
-                alt="React Jobs"
-              />
+              <FaBriefcase className="h-8 w-8 text-white" />
               <span className="hidden md:block text-white text-2xl font-bold ml-2"
-                >React Jobs</span
+                >Job Board</span
               >
             </NavLink>
             <div className="md:ml-auto">
