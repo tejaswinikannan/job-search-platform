@@ -18,6 +18,8 @@ dist-ssr
 __pycache__/
 *.pyc
 *.db
+.env
+api/chroma_db/
 
 # Editor directories and files
 .vscode/*

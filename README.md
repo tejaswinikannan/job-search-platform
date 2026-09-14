@@ -6,6 +6,7 @@ A job board application built with React, React Router, and Tailwind CSS on the 
 
 - **Home page** — hero section plus quick-action cards linking developers to job listings and employers to the job posting form.
 - **Browse jobs** (`/jobs`) — grid of all job listings fetched from the API, with a loading spinner while data is in flight.
+- **Natural-language job search** — a search box on the Browse jobs page lets users type a query like *"remote SQL jobs for a junior dev"* instead of picking dropdown filters. An LLM extracts structured filters (location, job type) and reranks semantically-matched candidates for relevance; see [API](#api) below.
 - **Job details** (`/jobs/:id`) — full listing view with job description, salary, location, and company contact info, loaded via a React Router data loader.
 - **Add job** (`/add-job`) — form to create a new listing (title, type, description, salary, location, company info) with toast confirmation on submit.
 - **Edit job** (`/edit-job/:id`) — form pre-populated with the existing listing's data for updates.
@@ -25,6 +26,8 @@ A job board application built with React, React Router, and Tailwind CSS on the 
 - [FastAPI](https://fastapi.tiangolo.com/) + [Pydantic](https://docs.pydantic.dev/) (Python 3.10+)
 - [SQLAlchemy](https://www.sqlalchemy.org/) ORM backed by [SQLite](https://www.sqlite.org/) (`api/data/jobs.db`) — `jobs` and `companies` tables, linked by a foreign key
 - [Uvicorn](https://www.uvicorn.org/) as the ASGI server
+- [LangChain](https://www.langchain.com/) + OpenAI (`gpt-4o-mini`) for natural-language query parsing and search-result reranking
+- [sentence-transformers](https://www.sbert.net/) + [Chroma](https://www.trychroma.com/) for local embedding generation and vector similarity search
 
 ## Project Structure
 
@@ -41,16 +44,21 @@ frontend/
 
 api/
 ├── app/
-│   ├── routes/jobs.py   # job CRUD endpoints (router mounted at /app/jobs)
+│   ├── routes/jobs.py   # job CRUD + search endpoints (router mounted at /app/jobs)
 │   ├── schemas.py         # Pydantic request/response models (JobCreate, JobUpdate, JobOut, Company)
 │   ├── models.py           # SQLAlchemy ORM models (Company, Job) mapped to SQL tables
-│   └── database.py          # engine/session setup + get_db() dependency
+│   ├── database.py          # engine/session setup + get_db() dependency
+│   ├── nlp_search.py         # parse_query() — LLM extracts structured filters from free text
+│   ├── vector_search.py       # index_jobs() / semantic_search() — embeddings + Chroma similarity search
+│   └── rerank.py                # rerank_jobs() — LLM judges relevance among semantic-search candidates
 ├── data/
 │   ├── jobs.json     # seed data — original listings, read by migrate_data.py
 │   └── jobs.db         # SQLite database file (generated, gitignored — not committed)
+├── chroma_db/            # persisted vector index (generated, gitignored — rebuild with index_jobs())
 ├── create_tables.py    # one-off script: builds jobs.db's schema from models.py
 ├── migrate_data.py       # one-off script: loads jobs.json into jobs.db
 ├── main.py                 # FastAPI app entry point
+├── .env                     # OPENAI_API_KEY (gitignored, not committed)
 └── requirements.txt
 ```
 
@@ -77,6 +85,18 @@ Then create the database and load the seed data (one-time setup — re-run only 
 ```bash
 python create_tables.py
 python migrate_data.py
+```
+
+Natural-language search needs an OpenAI API key in `api/.env`:
+
+```
+OPENAI_API_KEY=sk-...
+```
+
+It also needs the job data embedded into the local vector store before it can return results (re-run after adding/editing jobs):
+
+```bash
+python -c "from app.database import SessionLocal; from app import models; from app.vector_search import index_jobs; db = SessionLocal(); index_jobs(db.query(models.Job).all())"
 ```
 
 ### Running the app
@@ -118,6 +138,7 @@ Base path: `/app/jobs` (proxied through the frontend as `/api/jobs`)
 | Method | Path                 | Description         |
 |--------|----------------------|----------------------|
 | GET    | `/app/jobs/`          | List all jobs         |
+| GET    | `/app/jobs/search?query=` | Natural-language search — parses filters, ranks by semantic similarity, reranks by relevance |
 | POST   | `/app/jobs/`          | Create a job           |
 | GET    | `/app/jobs/{id}`     | Get a single job        |
 | PUT    | `/app/jobs/{id}`     | Update a job              |
